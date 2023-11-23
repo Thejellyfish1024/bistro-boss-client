@@ -34,7 +34,7 @@ const AdminHome = () => {
                         </defs>
                     </svg>
                     <div className="text-white">
-                        <h2 className="text-4xl font-bold">{data?.revenue}</h2>
+                        <h2 className="text-4xl font-bold">{data?.revenue.toFixed(2)}</h2>
                         <h4 className="text-2xl mt-2">Revenue</h4>
                     </div>
                 </div>

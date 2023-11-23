@@ -7,11 +7,11 @@ import useAdmin from "../../../hooks/useAdmin";
 
 const NavBar = () => {
 
-    const { user, logOut } = useAuth();
+    const { user,loading, logOut } = useAuth();
     const { data } = useCart();
-    const { isAdmin, isAdminLoading } = useAdmin()
+    const { isAdmin } = useAdmin()
 
-    if (isAdminLoading) {
+    if (loading) {
         return <div className="mt-10 text-center"><progress className="progress w-56"></progress></div>
     }
     const navLinks = <>

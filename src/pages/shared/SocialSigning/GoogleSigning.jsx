@@ -11,9 +11,9 @@ const GoogleSigning = () => {
 
     const handleGoogle = () =>{
         googleSigning()
-        .then(result =>{
+        .then(async (result) =>{
             console.log(result.user);
-            axiosSecure.post('/users', {name : result?.user?.displayName, email : result?.user?.email})
+            await axiosSecure.post('/users', {name : result?.user?.displayName, email : result?.user?.email})
             .then(res =>{
                 console.log(res.data);
                 navigate('/')

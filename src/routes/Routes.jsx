@@ -70,7 +70,7 @@ export const router = createBrowserRouter([
         {
           path:'/dashboard/updateItem/:id',
           element:<AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-          loader : async ({params}) =>await fetch(`http://localhost:5000/menu/${params.id}`) 
+          loader : async ({params}) =>await fetch(`https://bistro-boss-server-three-xi.vercel.app/menu/${params.id}`) 
         },
 
         // user routes
